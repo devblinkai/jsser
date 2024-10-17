@@ -18,39 +18,6 @@ export const decryptData = (ciphertext) => {
   }
 };
 
-// export const isLoggedIn = () => {
-//   try {
-//     const storedUser = localStorage.getItem("user");
-//     if (!storedUser) return false;
-
-//     const decryptedUser = decryptData(storedUser);
-//     return decryptedUser !== null;
-//   } catch (error) {
-//     return false;
-//   }
-// };
-
-// export const logout = () => {
-//   googleLogout();
-//   localStorage.removeItem("user");
-//   window.location.reload();
-// };
-
-// export const getUserDetails = () => {
-//   const storedUser = localStorage.getItem("user");
-//   if (!storedUser) return null;
-
-//   return decryptData(storedUser);
-// };
-
-// export const setLimitReached = () => {
-//   localStorage.setItem("LIMIT_REACHED", "true");
-// };
-
-// export const isLimitReached = () => {
-//   const limitReached = localStorage.getItem("LIMIT_REACHED");
-//   return limitReached === "true";
-// };
 
 export const setOpenAiApiKey = async (key) => {
   if (await isValidOpenAIKey(key)) {
