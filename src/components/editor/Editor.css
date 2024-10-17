@@ -1,0 +1,55 @@
+.editor-container {
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    background-color: #2c2929;
+    transition: opacity 0.5s ease;
+  }
+  
+  .editor-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .editor-title {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: .5rem;
+    background: #333333;
+  }
+  
+  .copy-to-clipboard-btn {
+    margin-left: .5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .codemirror-wrapper {
+    flex-grow: 1;
+    overflow: hidden;
+    transition: height 0.5s ease;
+  }
+  
+  /* Custom scrollbar styles */
+  .editor-container ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .editor-container ::-webkit-scrollbar-track {
+    background: #333333
+  }
+  
+  .editor-container ::-webkit-scrollbar-thumb {
+    background-color: hsl(0, 1%, 35%);
+    border-radius: 6px;
+    /* border: 3px solid hsl(220, 6%, 10%); */
+  }
+  
+  .editor-container ::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(223, 23%, 40%);
+  }

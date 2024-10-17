@@ -1,0 +1,142 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: rgba(8, 8, 8, 0.5); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  position: absolute;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  max-height: 80%;
+  overflow: auto;
+  z-index: 1001;
+  border: 2px solid black;
+  padding: 16px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  cursor: move;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.modal-title {
+  font-size: 16px;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 16px;
+  font-size: 15px;
+
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+}
+
+.message {
+  padding: 8px;
+  border-radius: 4px;
+  margin: 4px 0;
+  max-width: 80%;
+}
+
+.user-message {
+  align-self: flex-end;
+  background: #5aa5f5;
+  color: #fff;
+}
+
+.assistant-message {
+  align-self: flex-start;
+  background: #f1f1f1;
+  color: #333;
+}
+
+.error-message {
+  align-self: flex-start;
+  background: #f09494;
+  color: #333;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.modal-input {
+  width: calc(100% - 40px);
+  padding: 8px;
+  padding-right: 40px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 14px;
+  background-color: #edeaea;
+}
+
+.modal-send-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  border: none;
+  background: none;
+  color: #505152;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  padding: 0;
+}
+
+.modal-send-btn:disabled {
+  cursor: not-allowed;
+  color: #ccc;
+}
+
+.modal-send-btn:hover:not(:disabled) {
+  color: #868889;
+}
+
+.loading-message {
+  margin-top: 5px;
+  font-size: 0.875rem;
+  color: #888;
+  text-align: center;
+  width: 100%;
+}
