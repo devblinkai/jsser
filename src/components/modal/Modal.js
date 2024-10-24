@@ -1,10 +1,8 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import "./Modal.css";
 import ChatBox from "./ChatBox.js"; // Import the new component
-import GoogleAuth from "./GoogleAuth.js";
 import UpdateAPIKey from "./UpdateAPIKey.js";
 import {
-  isLoggedIn,
   isSKAdded,
 } from "../../utils/localStorage.js";
 
@@ -85,7 +83,7 @@ function Modal({ title, onClose, onSend, isLoading, messages }) {
         </div>
         <div className="modal-body">
           {
-            !isSKAdded() ? (
+            showUpdateApiKey ? (
               <UpdateAPIKey setShowUpdateApiKey={setShowUpdateApiKey} />
             ) : (
               <ChatBox
